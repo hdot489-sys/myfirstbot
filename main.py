@@ -27,7 +27,7 @@ async def filter_messages(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 # ----------------- Commands -----------------
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("Hello! Main aapka advanced bot hoon 🤖")
+    await update.message.reply_text("Hello! Main aapki bot Aliha hoon 🤖")
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
@@ -61,4 +61,5 @@ if __name__ == '__main__':
     # Run the bot
     print("Bot is starting... ✅")
     app.run_polling()
+
 
