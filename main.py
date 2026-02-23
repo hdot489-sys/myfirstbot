@@ -9,6 +9,11 @@ async def welcome(update: Update, context: ContextTypes.DEFAULT_TYPE):
     for member in update.message.new_chat_members:
         await update.message.reply_text(f"🎉 Welcome {member.full_name}! Enjoy the group.")
 
+# ----------------For Time check -----------------------
+async def time(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    now = datetime.now().strftime("%H:%M:%S")
+    await update.message.reply_text(f"Current time: {now}")
+
 # ----------------- Bad Word / Spam Filter -----------------
 BAD_WORDS = ["chutiya", "kutta", "soja","spamlink.com"]  # Apne words daal sakte ho
 
@@ -47,7 +52,8 @@ if __name__ == '__main__':
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("help", help_command))
     app.add_handler(CommandHandler("rules", rules))
-
+    app.add_handler(CommandHandler("time",time))
+    
     # Event handlers
     app.add_handler(MessageHandler(filters.StatusUpdate.NEW_CHAT_MEMBERS, welcome))
     app.add_handler(MessageHandler(filters.TEXT & (~filters.COMMAND), filter_messages))
@@ -55,3 +61,4 @@ if __name__ == '__main__':
     # Run the bot
     print("Bot is starting... ✅")
     app.run_polling()
+
