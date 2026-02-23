@@ -58,8 +58,19 @@ if __name__ == '__main__':
     app.add_handler(MessageHandler(filters.StatusUpdate.NEW_CHAT_MEMBERS, welcome))
     app.add_handler(MessageHandler(filters.TEXT & (~filters.COMMAND), filter_messages))
 
+    async def reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    text = update.message.text.lower()
+
+    if "hello" in text:
+        await update.message.reply_text("Hello kaise ho😎")
+    else:
+        await update.message.reply_text("Mujhe samajh nahi aaya 🤔")
+
+app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, reply))
+
     # Run the bot
     print("Bot is starting... ✅")
     app.run_polling()
+
 
 
