@@ -42,6 +42,8 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def rules(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("📜 Follow group rules.")
+    async def joke(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text("Ek joke suno 😄\nTeacher: Homework kyu nahi kiya?\nStudent: Sir network issue tha 😂")
 
 # Main
 if __name__ == '__main__':
@@ -51,12 +53,14 @@ if __name__ == '__main__':
     app.add_handler(CommandHandler("help", help_command))
     app.add_handler(CommandHandler("rules", rules))
     app.add_handler(CommandHandler("time", time))
+    app.add_handler(CommandHandler("joke",joke))
 
     app.add_handler(MessageHandler(filters.StatusUpdate.NEW_CHAT_MEMBERS, welcome))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
 
     print("Bot is starting... ✅")
     app.run_polling()
+
 
 
 
