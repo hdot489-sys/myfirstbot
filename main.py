@@ -37,8 +37,8 @@ async def joke(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Ek joke suno 😄\nTeacher: Homework kyu nahi kiya?\nStudent: Sir network issue tha 😂")
 
 if "tum batao" in text:
-    await update.massage.reply_text("Mai badhiya tum batao ")
-else:
+    await update.massage.reply_text("Mai badhiya tum batao")
+if "baigan" in text:
     await update.massage.reply_text("Jyada Juban Mat chalao")
 
 # Commands
@@ -66,6 +66,7 @@ if __name__ == '__main__':
 
     print("Bot is starting... ✅")
     app.run_polling()
+
 
 
 
