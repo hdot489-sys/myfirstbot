@@ -2,7 +2,8 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes, MessageHandler, filters
 import datetime
 
-TOKEN = '8588678263:AAEzV5-0XWET32fzXhsxmc8F_RkoKUoeRSM'   # Railway me env variable use karna better hai
+import os
+TOKEN = os.getenv("8588678263:AAEzV5-0XWET32fzXhsxmc8F_RkoKUoeRSM")   # Railway me env variable use karna better hai
 
 # ----------------- Welcome New Users -----------------
 async def welcome(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -60,3 +61,4 @@ if __name__ == '__main__':
 
     print("Bot is starting... ✅")
     app.run_polling()
+
