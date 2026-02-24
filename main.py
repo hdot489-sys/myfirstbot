@@ -3,7 +3,7 @@ import datetime
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes, MessageHandler, filters
 
-TOKEN = os.getenv("TOKEN")
+TOKEN = os.getenv("bot-token")
 
 # Welcome
 async def welcome(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -57,3 +57,4 @@ if __name__ == '__main__':
 
     print("Bot is starting... ✅")
     app.run_polling()
+
