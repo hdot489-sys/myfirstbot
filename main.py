@@ -33,6 +33,9 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     else:
         await update.message.reply_text("Mujhe samajh nahi aaya 🤔")
 
+async def joke(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text("Ek joke suno 😄\nTeacher: Homework kyu nahi kiya?\nStudent: Sir network issue tha 😂")
+
 # Commands
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Hello! Main aapki bot Aliha hoon 🤖")
@@ -42,8 +45,6 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def rules(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("📜 Follow group rules.")
-    async def joke(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("Ek joke suno 😄\nTeacher: Homework kyu nahi kiya?\nStudent: Sir network issue tha 😂")
 
 # Main
 if __name__ == '__main__':
@@ -60,6 +61,7 @@ if __name__ == '__main__':
 
     print("Bot is starting... ✅")
     app.run_polling()
+
 
 
 
