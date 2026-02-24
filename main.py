@@ -38,9 +38,9 @@ async def joke(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
 
-if "tum batao" in text:
+    if "tum batao" in text:
     await update.massage.reply_text("Mai badhiya tum batao")
-if "baigan" in text:
+    if "baigan" in text:
     
 app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
     
@@ -71,6 +71,7 @@ if __name__ == '__main__':
 
     print("Bot is starting... ✅")
     app.run_polling()
+
 
 
 
