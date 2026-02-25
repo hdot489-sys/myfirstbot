@@ -35,10 +35,10 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("Mai badhiya tum batao")
     
     elif "baigan" in text:
-        await update.message.reply_text("Jyada Juban Mat chalao")
+         await update.message.reply_text("Jyada Juban Mat chalao")
 
     elif "htt" in text:
-        await update.message.reply_text("hurrrrrrr")
+         await update.message.reply_text("hurrrrrrr")
 
     elif "chup" in text:
         await update.message.reply_text("Q chup rhu ")
@@ -51,7 +51,6 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
      elif "ok" in text:
         await update.message.reply_text("okk")
-
 
     elif "mar khaogi tum" in text:
         await update.message.reply_text("Mujh jaisi masoom ko maroge")
@@ -88,6 +87,7 @@ if __name__ == '__main__':
 
     print("Bot is starting... ✅")
     app.run_polling()
+
 
 
 
