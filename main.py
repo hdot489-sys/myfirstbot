@@ -30,18 +30,20 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     if "hello" in text:
         await update.message.reply_text("Hello kaise ho 😎")
+        
+    elif "tum batao" in text:
+        await update.message.reply_text("Mai badhiya tum batao")
+    
+    elif "baigan" in text:
+        await update.message.reply_text("Jyada Juban Mat chalao")
+
     else:
         await update.message.reply_text("Mujhe samajh nahi aaya 🤔")
 
 async def joke(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Ek joke suno 😄\nTeacher: Homework kyu nahi kiya?\nStudent: Sir network issue tha 😂")
 
-    if "tum batao" in text:
-        await update.message.reply_text("Mai badhiya tum batao")
     
-    if "baigan" in text:
-        await update.message.reply_text("Jyada Juban Mat chalao")
-
 # Commands
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Hello! Main aapki bot Aliha hoon 🤖")
@@ -67,6 +69,7 @@ if __name__ == '__main__':
 
     print("Bot is starting... ✅")
     app.run_polling()
+
 
 
 
