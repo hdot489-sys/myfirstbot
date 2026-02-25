@@ -49,7 +49,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     elif "hatt" in text:
         await update.message.reply_text("hurrrrrrr")
 
-     elif "ok" in text:
+    elif "ok" in text:
         await update.message.reply_text("okk")
 
     elif "mar khaogi tum" in text:
@@ -87,6 +87,7 @@ if __name__ == '__main__':
 
     print("Bot is starting... ✅")
     app.run_polling()
+
 
 
 
